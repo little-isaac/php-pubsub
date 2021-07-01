@@ -1,11 +1,11 @@
 {
-  "name": "superbalist/php-pubsub",
+  "name": "milind/php-pubsub",
   "description": "An adapter based PubSub package for PHP",
   "license": "MIT",
   "authors": [
     {
-      "name": "Superbalist.com a division of Takealot Online (Pty) Ltd",
-      "email": "info@superbalist.com"
+      "name": "Milind",
+      "email": "milind@getflits.com"
     }
   ],
   "require": {
