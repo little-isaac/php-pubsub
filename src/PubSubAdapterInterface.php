@@ -1,6 +1,6 @@
 <?php
 
-namespace Superbalist\PubSub;
+namespace milind\PubSub;
 
 interface PubSubAdapterInterface
 {

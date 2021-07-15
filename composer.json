@@ -13,7 +13,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Superbalist\\PubSub\\": "src/",
+      "milind\\PubSub\\": "src/",
       "Tests\\": "tests/"
     }
   },

@@ -4,7 +4,7 @@ namespace Tests;
 
 use Mockery;
 use PHPUnit\Framework\TestCase;
-use Superbalist\PubSub\Adapters\LocalPubSubAdapter;
+use milind\PubSub\Adapters\LocalPubSubAdapter;
 
 class LocalPubSubAdapterTest extends TestCase
 {

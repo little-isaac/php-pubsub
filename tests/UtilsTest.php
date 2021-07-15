@@ -3,7 +3,7 @@
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
-use Superbalist\PubSub\Utils;
+use milind\PubSub\Utils;
 
 class UtilsTest extends TestCase
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Superbalist\PubSub\Adapters;
+namespace milind\PubSub\Adapters;
 
-use Superbalist\PubSub\PubSubAdapterInterface;
+use milind\PubSub\PubSubAdapterInterface;
 
 class DevNullPubSubAdapter implements PubSubAdapterInterface
 {
