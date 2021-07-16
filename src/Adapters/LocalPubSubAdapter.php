@@ -4,8 +4,8 @@ namespace milind\PubSub\Adapters;
 
 use milind\PubSub\PubSubAdapterInterface;
 
-class LocalPubSubAdapter implements PubSubAdapterInterface
-{
+class LocalPubSubAdapter implements PubSubAdapterInterface {
+
     /**
      * @var array
      */
@@ -17,8 +17,7 @@ class LocalPubSubAdapter implements PubSubAdapterInterface
      * @param string $channel
      * @param callable $handler
      */
-    public function subscribe($channel, callable $handler)
-    {
+    public function subscribe($channel, callable $handler, $extraConfig = null) {
         if (!isset($this->subscribers[$channel])) {
             $this->subscribers[$channel] = [];
         }
@@ -31,8 +30,7 @@ class LocalPubSubAdapter implements PubSubAdapterInterface
      * @param string $channel
      * @param mixed $message
      */
-    public function publish($channel, $message)
-    {
+    public function publish($channel, $message, $extraConfig = null) {
         foreach ($this->getSubscribersForChannel($channel) as $handler) {
             call_user_func($handler, $message);
         }
@@ -44,10 +42,9 @@ class LocalPubSubAdapter implements PubSubAdapterInterface
      * @param string $channel
      * @param array $messages
      */
-    public function publishBatch($channel, array $messages)
-    {
+    public function publishBatch($channel, array $messages, $extraConfig = null) {
         foreach ($messages as $message) {
-            $this->publish($channel, $message);
+            $this->publish($channel, $message, $extraConfig);
         }
     }
 
@@ -58,8 +55,8 @@ class LocalPubSubAdapter implements PubSubAdapterInterface
      *
      * @return array
      */
-    public function getSubscribersForChannel($channel)
-    {
+    public function getSubscribersForChannel($channel) {
         return isset($this->subscribers[$channel]) ? $this->subscribers[$channel] : [];
     }
+
 }

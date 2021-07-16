@@ -2,16 +2,8 @@
 
 namespace milind\PubSub;
 
-interface PubSubAdapterInterface {
-
-    /**
-     * Subscribe a handler to a channel.
-     *
-     * @param string $channel
-     * @param callable $handler
-     */
-    public function subscribe($channel, callable $handler, $extraConfig = null);
-
+interface PublisherAdapterInterface
+{
     /**
      * Publish a message to a channel.
      *
